@@ -38,7 +38,36 @@
       "logo": "https://raw.githubusercontent.com/beskary/2nd_repo/main/logos/nextcloud.svg",
       "image": "lscr.io/linuxserver/nextcloud:latest",
       "interactive": true,
-      "command": "/bin/bash"
+      "command": "/bin/bash",
+      "note": "This image so far is for json portainer testing purposes only",
+      "env": [
+				{
+					"default": "1000",
+					"label": "PUID",
+					"name": "PUID"
+				},
+				{
+					"default": "100",
+					"label": "PGID",
+					"name": "PGID"
+				},
+				{
+					"label": "TZ",
+					"name": "TZ"
+				},
+				{
+					"label": "DATABASE_PASSWORD",
+					"name": "DATABASE_PASSWORD"
+				},
+				{
+					"label": "MYSQL_ROOT_PASSWORD",
+					"name": "MYSQL_ROOT_PASSWORD"
+				},
+				{
+					"label": "PORT",
+					"name": "PORT"
+				}
+			]
     },
     {
       "type": 1,
