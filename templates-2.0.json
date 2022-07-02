@@ -29,6 +29,17 @@
     },
     {
       "type": 1,
+      "title": "nextcloud_json_test",
+      "description": "This nextcloud is the first test to install nextcloud from my own repository",
+      "categories": ["cloud", "filesync"],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ubuntu.png",
+      "image": "lscr.io/linuxserver/nextcloud:latest",
+      "interactive": true,
+      "command": "/bin/bash"
+    },
+    {
+      "type": 1,
       "title": "NodeJS",
       "description": "JavaScript-based platform for server-side and networking applications",
       "categories": ["development"],
