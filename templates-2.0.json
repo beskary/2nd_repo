@@ -60,11 +60,11 @@
 			],
       "volumes": [
         {
-          "bind": "home/rolo/appdata/nextcloudlnxsvr7",
+          "bind": "/home/rolo/appdata/nextcloud_lnxsvr_7",
           "container": "/config"
         },
         {
-          "bind": "home/rolo/data/nextcloudlnxsvr7",
+          "bind": "/home/rolo/data/nextcloud_lnxsvr_7",
           "container": "/data"          
         }
       ],
