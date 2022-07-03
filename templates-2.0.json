@@ -39,6 +39,7 @@
       "ports": ["80", "443"],
       "logo": "https://raw.githubusercontent.com/beskary/2nd_repo/main/logos/nextcloud.svg",
       "image": "lscr.io/linuxserver/nextcloud:latest",
+      "restart_policy": "unless-stopped",
       "note": ["This image is customized for the linuxserver nextcloud version with php7. In this link you can find all the possible time zones: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"],
       "env": [
 				{
@@ -66,8 +67,61 @@
           "bind": "/home/rolo/data/nextcloud_lnxsvr_7",
           "container": "/data"          
         }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "MariaDB_lnxsvr",
+      "name": "MariaDB_lnxsvr",
+      "hostname": "MariaDB_lnxsvr",
+      "description": "Performance beyond MySQL",
+      "categories": ["database"],
+      "platform": "linux",
+      "network": "macvlan_network",     
+      "ports": ["3306"], 
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mariadb.png",
+      "image": "mariadb:latest",
+      "restart_policy": "unless-stopped",
+      "note": "db replacement for mySQL",
+      "env": [
+        {
+					"name": "PUID",
+          "label": "PUID",
+          "default": "1000"
+				},
+				{
+					"name": "PGID",
+          "label": "PGID",
+          "default": "1000"
+				},
+				{
+					"name": "TZ",
+          "label": "TZ",
+          "default": "America/Panama"
+				},
+        {
+          "name": "MYSQL_ROOT_PASSWORD",
+          "label": "MYSQL_ROOT_PASSWORD"
+        },
+        {
+          "name": "MYSQL_DATABASE",
+          "label": "MYSQL_DATABASE"
+        },
+        {
+          "name": "MYSQL_USER",
+          "label": "MYSQL_USER"
+        },
+        {
+          "name": "MYSQL_PASSWORD",
+          "label": "MYSQL_PASSWORD"
+        }
       ],
-      "restart_policy": "unless-stopped"
+      "volumes": [
+        {
+          "bind": "/home/rolo/appdata/MariaDB_lnxsvr",
+          "container": "/config"
+        }
+      ]
     },
     {
       "type": 1,
@@ -145,27 +199,6 @@
           "name": "MYSQL_ROOT_HOST",
           "default": "%",
           "preset": true
-        }
-      ],
-      "ports": ["3306/tcp"],
-      "volumes": [
-        {
-          "container": "/var/lib/mysql"
-        }
-      ]
-    },
-    {
-      "type": 1,
-      "title": "MariaDB",
-      "description": "Performance beyond MySQL",
-      "categories": ["database"],
-      "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mariadb.png",
-      "image": "mariadb:latest",
-      "env": [
-        {
-          "name": "MYSQL_ROOT_PASSWORD",
-          "label": "Root password"
         }
       ],
       "ports": ["3306/tcp"],
