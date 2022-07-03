@@ -40,7 +40,7 @@
       "logo": "https://raw.githubusercontent.com/beskary/2nd_repo/main/logos/nextcloud.svg",
       "image": "lscr.io/linuxserver/nextcloud:latest",
       "restart_policy": "unless-stopped",
-      "note": ["Nextcloud - linuxserver - php7 \n This image is customized for the linuxserver nextcloud version with php7. In this link you can find all the possible time zones: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"],
+      "note": ["Nextcloud - linuxserver - php7 \\n This image is customized for the linuxserver nextcloud version with php7. In this link you can find all the possible time zones: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"],
       "env": [
 				{
 					"name": "PUID",
