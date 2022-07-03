@@ -32,7 +32,7 @@
       "title": "nextcloud_lnxsvr_7",
       "name": "nextcloud_lnxsvr_7",
       "hostname": "nextcloud_lnxsvr_7",
-      "description": "Nextcloud - linuxserver - php7. \\n Nextcloud is a open source cloud service. It can be deployed locally or a remote server",
+      "description": "Nextcloud - linuxserver - php7. \\n Nextcloud is a open source cloud service. It can be deployed locally or a remote server. in this case we are going to use a repository from linuzxserver with nginx as the webserver",
       "categories": ["cloud", "filesync"],
       "platform": "linux",
       "network": "macvlan_network",
