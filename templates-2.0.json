@@ -29,9 +29,10 @@
     },
     {
       "type": 1,
-      "title": "nextcloud_json_test",
-      "name": "nextcloud_json_test UI",
-      "description": "This nextcloud is the first test to install nextcloud from my own repository",
+      "title": "nextcloud_lnxsvr_7",
+      "name": "nextcloud_lnxsvr_7",
+      "hostname": "nextcloud_lnxsvr_7",
+      "description": "Nextcloud is a open source cloud service. It can be deployed locally or a remote server.",
       "categories": ["cloud", "filesync"],
       "platform": "linux",
       "network": "macvlan_network",
@@ -39,35 +40,35 @@
       "image": "lscr.io/linuxserver/nextcloud:latest",
       "interactive": true,
       "command": "/bin/bash",
-      "note": "This image so far is for json portainer testing purposes only",
+      "note": ["This image is customized for the linuxserver nextcloud version with php7. In this link you can find all the possible time zones: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones"],
       "env": [
 				{
-					"default": "1000",
-					"label": "PUID",
-					"name": "PUID"
+					"name": "PUID",
+          "label": "PUID",
+          "default": "1000"
 				},
 				{
-					"default": "100",
-					"label": "PGID",
-					"name": "PGID"
+					"name": "PGID",
+          "label": "PGID",
+          "default": "1000"
 				},
 				{
-					"label": "TZ",
-					"name": "TZ"
-				},
-				{
-					"label": "DATABASE_PASSWORD",
-					"name": "DATABASE_PASSWORD"
-				},
-				{
-					"label": "MYSQL_ROOT_PASSWORD",
-					"name": "MYSQL_ROOT_PASSWORD"
-				},
-				{
-					"label": "PORT",
-					"name": "PORT"
+					"name": "TZ",
+          "label": "TZ",
+          "default": "America/Panama"
 				}
-			]
+			],
+      "volumes": [
+        {
+          "bind": "home/rolo/appdata/nextcloud_lnxsvr_7",
+          "container": "/config"
+        },
+        {
+          "bind": "home/rolo/data/nextcloud_lnxsvr_7",
+          "container": "/data"          
+        }
+      ],
+      "restart_policy": "unless-stopped"
     },
     {
       "type": 1,
