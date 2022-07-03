@@ -32,7 +32,7 @@
       "title": "nextcloud_lnxsvr_7",
       "name": "nextcloud_lnxsvr_7",
       "hostname": "nextcloud_lnxsvr_7",
-      "description": "Nextcloud - linuxserver - php7. Open source cloud service solution emote server .",
+      "description": "Nextcloud - linuxserver - php7. Open source cloud service solution remote servers .",
       "categories": ["cloud", "filesync"],
       "platform": "linux",
       "network": "macvlan_network",
@@ -120,6 +120,10 @@
         {
           "bind": "/home/rolo/appdata/MariaDB_lnxsvr",
           "container": "/config"
+        },
+        {
+          "bind": "/home/rolo/data/MariaDB_lnxsvr",
+          "container": "/var/lib/mysql"
         }
       ]
     },
