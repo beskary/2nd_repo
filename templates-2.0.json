@@ -79,7 +79,7 @@
       "platform": "linux",
       "network": "macvlan_network",     
       "ports": ["3306"], 
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mariadb.png",
+      "logo": "https://raw.githubusercontent.com/beskary/2nd_repo/main/logos/mariadb.svg",
       "image": "mariadb:latest",
       "restart_policy": "unless-stopped",
       "note": "db replacement for mySQL",
