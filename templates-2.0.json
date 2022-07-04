@@ -128,6 +128,21 @@
       ]
     },
     {
+      "type": 1, 
+      "title": "Postgres",
+      "description": "Best Database today",
+      "categories": ["database"],
+      "platform": "linux",
+      "logo": "", 
+      "image": "",
+      "restart_policy": "",
+      "note": "",
+      "env": [{}],
+      "volume": []
+
+
+    },
+    {
       "type": 1,
       "title": "NodeJS",
       "description": "JavaScript-based platform for server-side and networking applications",
