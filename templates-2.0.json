@@ -82,7 +82,7 @@
       "logo": "https://raw.githubusercontent.com/beskary/2nd_repo/main/logos/mariadb.svg",
       "image": "mariadb:latest",
       "restart_policy": "unless-stopped",
-      "note": "db replacement for mySQL",
+      "note": "db replacement for mySQL. /config was not defined as a volume path needed but the image uses it so, it was added in the volume section ",
       "env": [
         {
 					"name": "PUID",
@@ -129,15 +129,25 @@
     },
     {
       "type": 1, 
-      "title": "Postgres",
+      "title": "Postgresql",
       "description": "Best Database today",
       "categories": ["database"],
       "platform": "linux",
-      "logo": "", 
-      "image": "",
-      "restart_policy": "",
-      "note": "",
-      "env": [{}],
+      "logo": "https://raw.githubusercontent.com/beskary/2nd_repo/main/logos/postgresql.svg", 
+      "image": "postgres:latest",
+      "restart_policy": "always",
+      "note": "This is from the original repo",
+      "env": [
+        {
+          "name": "POSTGRES_PASSWORD",
+          "label": "POSTGRES_PASSWORD"
+        },
+        {
+          "name": "POSTGRES_USER",
+          "label": "POSTGRES_USER",
+          "default": "postgres"
+        }
+      ],
       "volume": []
 
 
