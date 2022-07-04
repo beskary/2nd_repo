@@ -146,7 +146,13 @@
           "name": "POSTGRES_USER",
           "label": "POSTGRES_USER",
           "default": "postgres"
+        },
+        {
+          "name": "POSTGRES_DB",
+          "label": "POSTGRES_DB",
+          "default": "postgres"
         }
+
       ],
       "volume": []
 
