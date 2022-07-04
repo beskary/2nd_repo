@@ -133,6 +133,8 @@
       "description": "Best Database today",
       "categories": ["database"],
       "platform": "linux",
+      "network": "macvlan_network",     
+      "ports": ["8080"], 
       "logo": "https://raw.githubusercontent.com/beskary/2nd_repo/main/logos/postgresql.svg", 
       "image": "postgres:latest",
       "restart_policy": "always",
@@ -154,7 +156,12 @@
         }
 
       ],
-      "volume": []
+      "volume": [
+        {
+          "bind": "/home/rolo/data/postgresql_o",
+          "container": "/var/lib/postgresql/data"
+        }
+      ]
 
 
     },
