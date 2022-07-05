@@ -129,9 +129,9 @@
     },
     {
       "type": 1, 
-      "title": "Postgresql change",
-      "name": "Postgresql",
-      "hostname": "Postgresql",
+      "title": "Postgresql",
+      "name": "postgresql",
+      "hostname": "postgresql",
       "description": "Best Database today.",
       "categories": ["database"],
       "platform": "linux",
@@ -157,7 +157,7 @@
           "default": "postgres"
         }
       ],
-      "volume": [
+      "volumes": [
         {
           "bind": "/home/rolo/data/postgresql_o",
           "container": "/var/lib/postgresql/data"
