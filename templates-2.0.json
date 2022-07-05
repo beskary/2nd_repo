@@ -154,7 +154,6 @@
           "label": "POSTGRES_DB",
           "default": "postgres"
         }
-
       ],
       "volume": [
         {
@@ -162,8 +161,6 @@
           "container": "/var/lib/postgresql/data"
         }
       ]
-
-
     },
     {
       "type": 1,
