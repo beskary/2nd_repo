@@ -130,7 +130,7 @@
     {
       "type": 1, 
       "title": "Postgresql",
-      "nome": "Postgresql",
+      "name": "Postgresql",
       "hostname": "Postgresql",
       "description": "Best Database today",
       "categories": ["database"],
