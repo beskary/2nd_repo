@@ -132,7 +132,7 @@
       "title": "Postgresql",
       "name": "Postgresql",
       "hostname": "Postgresql",
-      "description": "Best Database today",
+      "description": "Best Database today.",
       "categories": ["database"],
       "platform": "linux",
       "network": "macvlan_network",     
