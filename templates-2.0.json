@@ -129,7 +129,7 @@
     },
     {
       "type": 1, 
-      "title": "Postgresql",
+      "title": "Postgresql change",
       "name": "Postgresql",
       "hostname": "Postgresql",
       "description": "Best Database today.",
